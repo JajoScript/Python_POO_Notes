@@ -72,3 +72,17 @@ print(objeto.Estado()) # name.mothod
 
 # self recibe como parametro al nombre del objeto.
 # > objeto.Arrancar = True
+
+print(30*"-")
+print("segundo objeto..")
+
+# instancia del segundo objeto.
+objeto2 = Coche() 
+
+# Propiedades del segundo objeto.
+print(f"el largo del coche es {objeto2.largoChasis}") # name.propiedad
+print(f"el ancho del coche es {objeto2.anchoChasis}") # name.propiedad
+print(f"el objeto tiene {objeto2.ruedas} ruedas") # name.propiedad
+
+# Estado() del segundo objeto.
+print(objeto2.Estado()) # name.mothod
