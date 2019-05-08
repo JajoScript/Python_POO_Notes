@@ -1,0 +1,81 @@
+class Humano():
+# Estado Inicial.  
+    def __init__(self):
+        # Estado.
+        self.__vivo = False
+        self.__muerto = True
+        
+        # Sexo
+        self.__Hombre = False
+        self.__Mujer = False
+
+        # Body.
+        self.__cabeza = 1
+        self.__torso = 1
+        self.__brazos = 2
+        self.__piernas = 2    
+
+# Creacion de Metodos.
+    def Nacimiento(self):
+        self.__vivo = True
+        self.__muerto = False
+
+        # seguro.
+        if self.__vivo and self.__muerto:
+            print("Error")
+        elif self.__vivo == False and self.__muerto == False:
+            print("Error")
+        else:
+            print("Naciste xd")
+    
+    def Genero(self, sexo):
+        if sexo == "Hombre":
+            self.__Hombre = True
+            self.__Mujer = False
+            print("Eres Hombre! :)")
+
+        elif sexo == "Mujer":
+            self.__Hombre = False
+            self.__Mujer = True
+            print("Eres Hombre! :)")
+        
+        else:
+            print("Error no esperado")
+
+    def Estado(self):
+        if self.__vivo == False:
+            self.__muerto = True
+            return print("Te moriste :(")
+        elif self.__vivo == True:
+            self.__muerto = False
+            return print("Estas vivo :)")
+        else:
+            return print("error no esperado.")
+
+    def Status(self):
+        # Estado de la cabeza.
+        print(f"tienes {self.__cabeza} Cabeza")
+        
+        # Estado de los brazos.
+        if self.__brazos == 2:
+            print(f"tienes {self.__brazos}Brazos")
+        elif self.__brazos == 1:
+            print(f"tienes {self.__brazos}Brazo")
+        else:
+            print("error no esperado")
+        
+        # Estado de las piernas
+
+
+# Casos alternos.
+    def Guerra(self):
+        # Perder un brazo
+        self.__brazos -= 1
+        print("perdiste un brazito")
+        print(f"Tienes {self.__brazos} brazo :(")
+    
+Vicho = Humano()
+Vicho.Nacimiento()
+Vicho.Genero("Hombre")
+Vicho.Estado()
+Vicho.Guerra()
